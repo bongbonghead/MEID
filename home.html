@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Construction Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body>
+
+<!-- HERO IMAGE HEADER -->
+<header class="hero">
+    <nav class="top-nav">
+        <div class="nav-inner">
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#aboutus">About</a></li>
+                <li><a href="#QnA">QnA</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:+6597634390" class="call-btn">Call Now!</a>
+        </div>
+    </nav>
+
+    <div class="hero-images">
+        <img src="../Home reno/kitchen.jpg" alt="">
+        <img src="../Home reno/pool.jpg" alt="">
+        <img src="../Home reno/livingrm2CONDO.jpg" alt="">
+        <img src="../Home reno/livingrmHDB.JPG" alt="">
+    </div>
+
+    <div class="overlay">
+        <h1 class="fade-in">Building Your Vision</h1>
+        <p class="fade-in delay-1">Reliable Construction & Contracting Services</p>
+        <a href="#contact" class="btn fade-in delay-2">Get a Quote</a>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section class="section about"  id="aboutus">
+    <h2>About Us</h2>
+    <p>
+        We are a professional construction company delivering high-quality
+        residential and commercial projects with precision, safety, and trust.
+    </p>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-grid">
+        <div class="service-card">
+            <img src="../Home reno/kitchenHDB.JPG" alt="">
+            <h3>Residential Construction</h3>
+            <p>Custom homes built with quality craftsmanship.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="../Home reno/floorRESTAURANT.png" alt="">
+            <h3>Commercial Projects</h3>
+            <p>Efficient and reliable commercial construction.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="../Home reno/office.2.png" alt="">
+            <h3>Renovation & Remodeling</h3>
+            <p>Transforming spaces into modern environments.</p>
+            
+        </div>
+        
+    </div>
+        <p class="service-note">
+            Click on the box to see more info
+        </p>
+
+    <!-- INTERIOR DESIGN SERVICE (CLICKABLE) -->
+    <div class="service-wrapper" id="interior-wrapper">
+
+        <div class="service-detail clickable">
+            <img src="../Home reno/kitchen.JPG" alt="Interior Design">
+            <div class="service-text">
+                <h3>Residential Construction</h3>
+                <p>We provide full interior design solutions to make your space functional and beautiful.</p>
+            </div>
+        </div>
+
+        <!-- DROPDOWN BELOW -->
+        <div class="service-dropdown">
+            <button class="close-btn">x</button>
+            <p>
+                Our interior design services include space planning, 3D visualization,
+                custom carpentry, lighting design, material selection, and full renovation
+                coordination from concept to completion.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- PROJECT PLANNING (CLICKABLE)-->
+    <div class="service-wrapper" id="interior-wrapper">
+
+    <div class="service-detail clickable">
+        <img src="../Home reno/fordropdown.png" alt="">
+        <div class="service-text">
+            <h3>Commercial Projects</h3>
+            <p>Comprehensive project planning from start to finish.</p>
+        </div>
+    </div>
+
+    <div class="service-dropdown">
+        <button class="close-btn">x</button>
+        <p>
+            This is the extra detailed content for Project Planning.
+            You can write anything here.
+        </p>
+    </div>
+</div>
+
+    <div class="service-wrapper" id="interior-wrapper">
+
+    <div class="service-detail clickable">
+        <img src="../Home reno/renoOFFICE.png" alt="">
+        <div class="service-text">
+            <h3>Commercial Projects</h3>
+            <p>Comprehensive project planning from start to finish.</p>
+        </div>
+    </div>
+
+    <div class="service-dropdown">
+        <button class="close-btn">x</button>
+        <p>
+            This is the extra detailed content for Project Planning.
+            You can write anything here.
+        </p>
+    </div>
+
+</div>
+</section>
+
+<!-- Why Choose Us Section -->
+    <section id="QnA" class="section why-us">
+        <h2>Why Choose Us</h2>
+        <div class="why-cards">
+            <div class="why-card">
+                <h3>Experienced Team</h3>
+                <p>Our team has decades of combined experience in construction and design.</p>
+            </div>
+            <div class="why-card">
+                <h3>High Quality</h3>
+                <p>We only use the best materials and follow industry best practices.</p>
+            </div>
+            <div class="why-card">
+                <h3>Customer Satisfaction</h3>
+                <p>Your happiness is our top priority – we work until you’re satisfied.</p>
+            </div>
+        </div>
+    </section>
+    <div class="why-dropdown">
+        <div class="why-question" onclick="toggleWhy()">
+            <span>Want to know what really sets us apart?</span>
+            <span class="arrow" id="whyArrow">▼</span>
+        </div>
+
+        <div class="why-answer" id="whyAnswer">
+            <p>
+            We don’t just finish projects — we build long-term relationships.
+            From the first consultation to final walkthrough, our focus is
+            transparency, craftsmanship, and exceeding expectations.
+            </p>
+        </div>
+    </div>
+    <div class="why-dropdown">
+        <div class="why-question">
+            <span>Want to know what really sets us apart?</span>
+            <span class="arrow">▼</span>
+        </div>
+
+        <div class="why-answer">
+            <p>
+            We don’t just finish projects — we build long-term relationships.
+            From the first consultation to final walkthrough, our focus is
+            transparency, craftsmanship, and exceeding expectations.
+            </p>
+        </div>
+    </div>
+
+    <div class="why-dropdown">
+            <div class="why-question">
+                <span>How do we keep projects on schedule?</span>
+                <span class="arrow">▼</span>
+            </div>
+
+            <div class="why-answer">
+                <p>
+                Our process is built around planning, communication, and accountability.
+                We provide clear timelines and consistent updates throughout the project.
+                </p>
+            </div>
+    </div>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+    <div class="contact-container">
+
+        <div class="contact-header">
+            <h2>Contact Us</h2>
+            <p>Have a project in mind? Send us a message and we’ll get back to you shortly.</p>
+            <p>You can also call our in charge , Ming Wei @ +65 9763 4390</p>
+        </div>
+
+        <div class="contact-content">
+
+            <!-- IMAGE SIDE -->
+            <div class="contact-image">
+                <img src="../Home reno/home.jpg" alt="Construction Project">
+            </div>
+
+            <!-- FORM SIDE -->
+            <form class="contact-form"
+                  action="https://formsubmit.co/shenghong1269@gmail.com"
+                  method="POST">
+
+                <input type="hidden" name="_subject" value="New Website Contact Message">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-row">
+                    <input type="number" name="age" placeholder="Your Age" required>
+                </div>
+
+                <textarea name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps?q=311+Old+Birdcage+Walk+Singapore+798484&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+        </div>
+        
+    </div>
+</section>
+
+
+<footer class="footer">
+            <div class="footer-left">
+
+                <div class="footer-left-top">
+
+                    <!-- NAME + ICONS -->
+                    <div class="left-info">
+                        <h2>Ming Wei</h2>
+                        <p>
+                            MEID Pte Ltd<br>
+                            UEN 201500943R
+                        </p>
+
+                        <!-- ICONS DIRECTLY UNDER CEA -->
+                        <div class="icons">
+                            <a href="https://api.whatsapp.com/send/?phone=6597634390" target="_blank">
+                                <img src="../Home reno/Whatsappicon.png" alt="WhatsApp">
+                            </a>
+                            <a href="tel: +6597634390">
+                                <img src="../Home reno/Phoneicon.png" alt="Phone">
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank">
+                                <img src="../Home reno/instagramicon.png" alt="Telegram">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT (BESIDE NAME) -->
+                    <div class="left-contact">
+                        <h3>Contact</h3>
+                        <p>
+                            +65 9763 4390<br>
+                            meidpteltd@gmail.com
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE DESCRIPTION -->
+            <div class="footer-right">
+                <div class="description">
+                    <p>
+                        IG QR CODE
+                    </p>
+                    <p class="copyright">
+                        Make sure to follow our instagram account for promotions !
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+<!-- DROPDOWN SCRIPT -->
+<script>
+    document.querySelectorAll(".service-wrapper").forEach(wrapper => {
+        const card = wrapper.querySelector(".service-detail");
+        const closeBtn = wrapper.querySelector(".close-btn");
+
+        card.addEventListener("click", () => {
+            wrapper.classList.add("active");
+        });
+
+        closeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            wrapper.classList.remove("active");
+        });
+    });
+</script>
+<script>
+document.querySelectorAll(".why-question").forEach(question => {
+  question.addEventListener("click", () => {
+    const dropdown = question.parentElement;
+    dropdown.classList.toggle("active");
+  });
+});
+</script>
+
+
+
+</body>
+</html>

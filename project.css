@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* pushes everything below navbar */
+.projects-layout {
+  margin-top: 100px;
+  display: flex;
+  min-height: calc(100vh - 100px); /* at least viewport */
+  align-items: stretch;            /* IMPORTANT */
+}
+
+
+/* sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #1e293b;
+  color: white;
+  padding: 20px;
+
+  position: sticky;
+  top: 100px;                 /* navbar height */
+  height: calc(100vh - 100px);
+}
+
+
+
+/* RIGHT SIDE CONTENT */
+.projects-content {
+  flex: 1;
+  padding: 40px;
+}
+
+/* TITLE */
+.projects-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* IMAGE ROW */
+.projects-grid {
+  display: flex;
+  gap: 30px; /* spacing between images */
+}
+
+/* CARD */
+.project-card {
+  text-align: center;
+  flex: 1;
+}
+
+.project-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-card p {
+  margin-top: 12px;
+  font-weight: 600;
+}
+/* MODAL OVERLAY */
+.project-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 2000;
+}
+
+.project-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* MODAL BOX */
+.modal-content {
+  background: white;
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* IMAGE */
+.modal-image img {
+  width: 600px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* TEXT */
+.modal-text {
+  max-width: 400px;
+}
+
+.modal-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.modal-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* CLOSE BUTTON */
+.project-modal .close-btn {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+.project-card {
+  cursor: pointer;
+}
+.projects-note {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #777;
+  font-style: italic;
+}
+.projects-note::after {
+    content: " ↓";
+}

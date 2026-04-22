@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+
+<nav class="top-nav">
+    <div class="nav-inner">
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="home.html#services">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="home.html#aboutus">About</a></li>
+            <li><a href="home.html#QnA">QnA</a></li>
+            <li><a href="home.html#contact">Contact</a></li>
+        </ul>
+        <a href="tel:+6597634390" class="call-btn">Call Now!</a>
+    </div>
+</nav>
+
+<div class="projects-layout">
+
+    <!-- LEFT -->
+    <aside class="sidebar">
+        <h2>Our Projects</h2>
+        <ul>
+            <li>Project Alpha</li>
+            <li>Project Beta</li>
+            <li>Project Gamma</li>
+        </ul>
+    </aside>
+
+    <!-- RIGHT -->
+    <main class="projects-content">
+
+        <h1 class="projects-title">We build projects that last</h1>
+        <p class="projects-note">Click on any image to know more</p>
+
+
+        <div class="projects-grid">
+
+            <div class="project-card" onclick="openModal()">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Angela Residence">
+                <p>Angela Residence</p>
+            </div>
+
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994" alt="House 2">
+                <p>Luxury Residence</p>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c" alt="House 3">
+                <p>Family Home</p>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+<!-- PROJECT MODAL -->
+<div class="project-modal" id="projectModal">
+    <span class="close-btn" onclick="closeModal()">×</span>
+
+    <div class="modal-content">
+        <div class="modal-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Angela Residence">
+        </div>
+
+        <div class="modal-text">
+            <h2>Angela Residence</h2>
+            <p>
+                We build modern, long-lasting residences with attention to
+                architectural detail, quality materials, and timeless design.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+function openModal() {
+    document.getElementById("projectModal").classList.add("active");
+}
+
+function closeModal() {
+    document.getElementById("projectModal").classList.remove("active");
+}
+</script>
+
+</body>
+</html>
