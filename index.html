@@ -5,8 +5,6 @@
     <title>Construction Company</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    
-    
 </head>
 <body>
 
@@ -34,7 +32,7 @@
 
     <div class="overlay">
         <h1 class="fade-in">Building Your Vision</h1>
-        <p class="fade-in delay-1">Reliable Construction & Contracting Services</p>
+        <p class="fade-in delay-1">Interior Design Consultation and Construction Services</p>
         <a href="#contact" class="btn fade-in delay-2">Get a Quote</a>
     </div>
 </header>
@@ -77,66 +75,68 @@
             Click on the box to see more info
         </p>
 
-    <!-- INTERIOR DESIGN SERVICE (CLICKABLE) -->
-    <div class="service-wrapper" id="interior-wrapper">
+    <!-- ✅ NEW WRAPPER GRID -->
+    <div class="service-wrapper-grid">
 
-        <div class="service-detail clickable">
-            <img src="kitchenHDB.JPG" alt="">
-            <div class="service-text">
-                <h3>Residential Construction</h3>
-                <p>We provide full interior design solutions to make your space functional and beautiful.</p>
+        <!-- BOX 1 -->
+        <div class="service-wrapper">
+            <div class="service-detail clickable">
+                <img src="kitchen.JPG" alt="">
+                <div class="service-text">
+                    <h3>Residential Construction</h3>
+                    <p>We provide full interior design solutions.</p>
+                </div>
+            </div>
+
+            <div class="service-dropdown">
+                <button class="close-btn">x</button>
+                <p>
+                    Our interior design services include space planning, 3D visualization,
+                    custom carpentry, lighting design, material selection, and full renovation.
+                </p>
             </div>
         </div>
 
-        <!-- DROPDOWN BELOW -->
-        <div class="service-dropdown">
-            <button class="close-btn">x</button>
-            <p>
-                Our interior design services include space planning, 3D visualization,
-                custom carpentry, lighting design, material selection, and full renovation
-                coordination from concept to completion.
-            </p>
+        <!-- BOX 2 -->
+        <div class="service-wrapper">
+            <div class="service-detail clickable">
+                <img src="fordropdown.png" alt="">
+                <div class="service-text">
+                    <h3>Commercial Projects</h3>
+                    <p>Comprehensive project planning from start to finish.</p>
+                </div>
+            </div>
+
+            <div class="service-dropdown">
+                <button class="close-btn">x</button>
+                <p>
+                    Full commercial planning including budgeting, site coordination,
+                    contractor management, and execution timeline control.
+                </p>
+            </div>
+        </div>
+
+        <!-- BOX 3 -->
+        <div class="service-wrapper">
+            <div class="service-detail clickable">
+                <img src="renoOFFICE.png" alt="">
+                <div class="service-text">
+                    <h3>Renovation Works</h3>
+                    <p>Office and retail space transformation.</p>
+                </div>
+            </div>
+
+            <div class="service-dropdown">
+                <button class="close-btn">x</button>
+                <p>
+                    We handle full renovation works including demolition, rebuild,
+                    flooring, electrical, and interior finishing.
+                </p>
+            </div>
         </div>
 
     </div>
-
-    <!-- PROJECT PLANNING (CLICKABLE)-->
-    <div class="service-wrapper" id="interior-wrapper">
-
-    <div class="service-detail clickable">
-        <img src="fordropdown.png" alt="">
-        <div class="service-text">
-            <h3>Commercial Projects</h3>
-            <p>Comprehensive project planning from start to finish.</p>
-        </div>
-    </div>
-
-    <div class="service-dropdown">
-        <button class="close-btn">x</button>
-        <p>
-            This is the extra detailed content for Project Planning.
-            You can write anything here.
-        </p>
-    </div>
-</div>
-
-    <div class="service-wrapper" id="interior-wrapper">
-
-    <div class="service-detail clickable">
-        <img src="renoOFFICE.png" alt="">
-        <div class="service-text">
-            <h3>Commercial Projects</h3>
-            <p>Comprehensive project planning from start to finish.</p>
-        </div>
-    </div>
-
-    <div class="service-dropdown">
-        <button class="close-btn">x</button>
-        <p>
-            This is the extra detailed content for Project Planning.
-            You can write anything here.
-        </p>
-    </div>
+</section>
 
 </div>
 </section>
@@ -332,7 +332,31 @@ document.querySelectorAll(".why-question").forEach(question => {
 });
 </script>
 
+<script>
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
 
+    document.querySelectorAll(".hero-images img").forEach(img => {
+        img.style.transform = `translateY(${scrollY * 0.3}px)`;
+    });
+
+    const overlay = document.querySelector(".overlay");
+    overlay.style.transform = `translateY(${scrollY * -0.4}px)`;
+    overlay.style.opacity = 1 - scrollY / 400;
+});
+</script>
+<script>
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
