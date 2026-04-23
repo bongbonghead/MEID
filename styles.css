@@ -9,7 +9,7 @@ html {
 }
 /* NAV BAR */
 .top-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -30,7 +30,7 @@ html {
     display: flex;
     gap: 40px;
     align-items: center;
-    border: 2px solid #ff9a6a;
+    border: 2px solid #012a58;
     background: #3a3a3a;
 }
 
@@ -59,7 +59,7 @@ html {
 
 /* CALL BUTTON */
 .call-btn {
-    background: #ff5a1f;     /* EXACT ORANGE */
+    background: #0455b1;     /* EXACT ORANGE */
     color: black;
     padding: 18px 40px;
     font-weight: 600;
@@ -79,7 +79,7 @@ body {
 /* HERO */
 .hero {
     position: relative;
-    min-height: 90vh;
+    height: 100vh;   /* full screen height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,10 +90,11 @@ body {
     position: absolute;
     inset: 0;
     width: 100%;
-    height: 100%;
+    height: 120%; /* bigger for movement */
     object-fit: cover;
     opacity: 0;
     animation: imageFade 24s infinite;
+    transform: translateY(0);
 }
 
 .hero-images img:nth-child(1) { animation-delay: 0s; }
@@ -118,22 +119,36 @@ body {
     position: relative;
     color: white;
     text-align: center;
+    gap: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.overlay p{
+    margin-bottom: 30px;
+}
 .btn {
-    background: #f4b400;
+    background: #1d0cff;
     color: black;
     padding: 10px 40px;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 /* SECTIONS */
 .section {
     padding: 70px 20px;
     text-align: center;
+
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.6s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .service-grid {
@@ -162,28 +177,23 @@ body {
 }
 
 .service-card {
-    width: 300px;
-    overflow: hidden;
+    width: auto;   /* or just delete the width line */
+    flex: 1;       /* THIS is the key */
 }
 
 .service-card img,
 .service-detail img {
     width: 100%;
-    max-width: 420px;   /* controls image width */
-    height: 260px;      /* same height for all */
+    height: 220px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
 }
-
 
 .service-detail {
     display: flex;
-    gap: 20px;
-    max-width: 900px;
-    margin: 40px auto 0;
-    padding: 20px;
-    text-align: left;
-    align-items: center;
+    flex-direction: column; /* stack image + text */
+    padding: 0;
+    overflow: hidden;
 }
 
 .service-detail.clickable {
@@ -192,10 +202,14 @@ body {
 
 /* DROPDOWN */
 .service-wrapper {
-    max-width: 900px;
-    margin: 40px auto 0;
+    width: 100%;
 }
-
+.service-wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 25px;
+    margin-top: 40px;
+}
 .service-dropdown {
     background: white;
     padding: 20px;
@@ -479,3 +493,6 @@ body {
 .why-dropdown.active .arrow {
     transform: rotate(180deg);
 }
+
+
+
