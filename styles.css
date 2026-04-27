@@ -30,7 +30,7 @@ html {
     display: flex;
     gap: 40px;
     align-items: center;
-    border: 2px solid #012a58;
+    
     background: #3a3a3a;
 }
 
@@ -59,8 +59,8 @@ html {
 
 /* CALL BUTTON */
 .call-btn {
-    background: #0455b1;     /* EXACT ORANGE */
-    color: black;
+    
+    color: white;
     padding: 18px 40px;
     font-weight: 600;
     text-decoration: none;
@@ -127,8 +127,8 @@ body {
     margin-bottom: 30px;
 }
 .btn {
-    background: #1d0cff;
-    color: black;
+    background: #3a3a3a;
+    color: white;
     padding: 10px 40px;
     text-decoration: none;
     font-weight: bold;
